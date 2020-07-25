@@ -7,13 +7,15 @@ function PrivateRoute({ children, token, ...rest }) {
         <Route
             {...rest}
             render={({ location }) => {
-                return (
+                return !token ? (
                     <Redirect
                         to={{
                             pathname: "/login",
                             state: { location },
                         }}
                     />
+                ) : (
+                    children
                 );
             }}
         />

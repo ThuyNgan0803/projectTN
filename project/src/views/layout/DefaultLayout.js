@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Layout } from 'antd';
 import "./style.css"
-import DfHeader from '../componets/header/DfHeader';
-import Carou from '../componets/carousel/Carousels'
-import Contact from '../componets/footer/Contact';
-import Subscribe from '../componets/footer/Subscribe';
-import DfSider from '../componets/sider/DfSider';
-import Contents from '../componets/content/Contents';
+import DfHeader from '../components/header/DfHeader';
+import Carou from '../components/carousel/Carousels'
+import Contact from '../components/footer/Contact';
+import Subscribe from '../components/footer/Subscribe';
+import DfSider from '../components/sider/DfSider';
+import Contents from '../components/content/Contents';
 
 class DefaultLayout extends Component {
     render() {
@@ -15,9 +15,6 @@ class DefaultLayout extends Component {
               <div className="sale">
                 Sale 50%
               </div>
-              <div className = "carousel">
-                <Carou/>
-              </div>
               <div className="option-header">
                 <div className="logo">
                     DBN SHOP
@@ -25,6 +22,9 @@ class DefaultLayout extends Component {
                 <div className="header">
                   <DfHeader/>
                 </div>
+              </div>
+              <div className = "carousel">
+                <Carou/>
               </div>
               <Layout className= "content">
                 <div className="sider">

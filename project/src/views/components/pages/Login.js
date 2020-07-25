@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Form, Input, Button, Checkbox, Card, Spin, Alert } from "antd";
 import { connect } from 'react-redux'
-import { login } from '../../../actions/Action'
+import { login } from '../../../actions/LoginAction'
+import { Redirect } from "react-router-dom";
 
 const layout = {
     labelCol: {
@@ -68,9 +69,10 @@ class Login extends Component {
     };
     render() {
         const { data, message, loading } = this.state;
-        console.log(data);
+        const {isLoggedIn} = this.props;
         return (
             <>
+             {isLoggedIn && <Redirect to="/"/>}
             <Card title="Login" style={{ textAlign: "center" }}>
                 {message.err && (
                     <Alert
@@ -147,10 +149,16 @@ class Login extends Component {
     }
 }
 
+function mapStateToProps (state) {
+    return {
+        // isLoggedIn: state.login.isLoggedIn
+    }
+}
+
 function mapDispatchToProps () {
     return {
         login
     }
 }
 
-export default connect(null , mapDispatchToProps())(Login)
+export default connect(mapStateToProps , mapDispatchToProps())(Login)
