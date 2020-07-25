@@ -10,8 +10,4 @@ function fetchStatistic() {
     return axios.get("http://medical-backend.herokuapp.com/api/news/get-statistic")
 }
 
-let Storage = {
-    users: []
-}
-
 export { onLogin, fetchStatistic }

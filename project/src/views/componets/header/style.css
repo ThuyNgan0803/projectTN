@@ -1,49 +1,40 @@
-.sale {
-    background-color: bisque;
+.page {
     width: 100%;
-    text-align: center;
-    height: 50px;
+    color: rgb(44, 42, 40);
+    font-weight: bold;
 }
 
-.header {
+.header ul {
     width: 100%;
-    height: 100px;
-}
-
-ul {
+    height: auto;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    padding-left: 10%;
 }
 
 li {
     float: left;
+    padding: 10px;
 }
 
 li a {
     display: block;
-    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    color: brown;
 }
 
 
 /* Change the link color to #111 (black) on hover */
 
 li a:hover {
-    background-color: #111;
-}
-
-.logo {
-    width: 30%;
-    float: left;
+    background-color: rgb(104, 54, 54);
 }
 
 .cart {
     width: 10%;
-    padding-right: 5%;
     float: right;
 }

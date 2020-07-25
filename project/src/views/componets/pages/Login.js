@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { Form, Input, Button, Checkbox, Card, Spin, Alert } from "antd";
-// import { login } from "../../api/index";
 import { connect } from 'react-redux'
-import { login } from '../../actions/Action'
-import { Redirect } from "react-router-dom";
+import { login } from '../../../actions/Action'
 
 const layout = {
     labelCol: {
