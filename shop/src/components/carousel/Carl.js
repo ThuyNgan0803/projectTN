@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Carousel } from 'antd';
 import "./style.css"
 
-class Slider extends Component {
+class Carl extends Component {
     render() {
         return (
             <Carousel autoplay className = "ant-carousel">
@@ -25,13 +25,13 @@ class Slider extends Component {
                     />
                 </div>
                 <div className = "slick-slide">
-                    <img src="https://arvaniv.files.wordpress.com/2013/12/7faa2-puma-logo-wallpaper-5298-hd-wallpapers.jpg" 
+                    <img src="" 
                     alt="Puma"
                     style={{width:"100%",height:"50vh", objectFit:"cover"}}
                     />
                 </div>
                 <div className = "slick-slide slide5">
-                    <img src="https://images.solecollector.com/complex/image/upload/c_fill,f_auto,fl_lossy,q_auto,w_1100/brand-vans_ncetfc.jpg" 
+                    <img src="" 
                     alt="Vans"
                     style={{width:"100%",height:"50vh", objectFit:"cover"}}
                     />
@@ -41,4 +41,4 @@ class Slider extends Component {
     }
 }
 
-export default Slider;
+export default Carl;

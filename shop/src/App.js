@@ -1,16 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Home from './components/Home'
+import Login from './components/Login'
 import Shop from './components/Shop'
 import OurStory from './components/OurStory'
-import Contact from './components/Contact'
+import Contact from './components/contact/Contact'
+import Carl from './components/carousel/Carl'
+import Footer from './components/footer/Footer'
 import {
   createFromIconfontCN,
   HomeOutlined,
+  UserOutlined,
 } from '@ant-design/icons';
+import { Avatar } from 'antd';
 import "./App.css"
-import Carl from './components/slider/Carl'
-import Footer from './components/footer/Footer'
 
 const IconFont = createFromIconfontCN({
   scriptUrl: [
@@ -26,12 +29,12 @@ function App() {
         Sale 70%
       </div>
       <div className="logo">
-        Logo Shop
+        DBN Shop
       </div>
       <div className="header">
         <ul>
           <li>
-            <Link to= "/Slider"><HomeOutlined /></Link>
+            <Link to= "/"><HomeOutlined /></Link>
           </li>
           <li>
             <Link to= "/Home">Home</Link>
@@ -48,11 +51,14 @@ function App() {
           <li className= "cart">
             <Link to= "/Cart"><IconFont type="icon-shoppingcart" /></Link>
           </li>
+          <li className= "avt">
+            <Link to= "/Login"><Avatar icon={<UserOutlined />} /></Link>
+          </li>
         </ul>
       </div>
       <div className="content">
         <Switch>
-          <Route path="/Slider">
+          <Route exact path="/">
             <Carl/>
           </Route>
           <Route path="/Home">
@@ -69,6 +75,9 @@ function App() {
           </Route>
           <Route path="/Cart">
             Cart
+          </Route>
+          <Route path="/Login">
+            <Login/>
           </Route>
       </Switch>
       </div>

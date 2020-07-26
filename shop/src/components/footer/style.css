@@ -1,14 +1,65 @@
 .footer {
     width: 100%;
     height: 30vh;
-    display: flex;
     border-top: 1px solid black;
+    text-align: center;
 }
 
-.footer ul {
+.footer1 {
+    width: 100%;
+    height: 5vh;
+    font-size: 28px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px red;
+}
+
+.footer2 {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+}
+
+.footer2 ul {
     list-style-type: none;
 }
 
+.list-icon {
+    display: inline;
+}
+
+.list-icon li {
+    padding: 0 5px;
+}
+
 .contact-left {
-    width: 29%;
+    width: 40%;
+}
+
+.list-icon {
+    width: 20%;
+    font-size: 24px;
+    margin: 0!important;
+    padding-top: 20px;
+}
+
+.list-icon ul {
+    padding-inline-start: 0!important;
+}
+
+.list-icon li {
+    display: inline!important;
+}
+
+.footer2 ul li:hover {
+    color: brown;
+}
+
+.footer3 {
+    width: 100%;
+    height: 5vh;
+}
+
+.footer3 div {
+    padding: 0 0 10px 0;
 }
