@@ -8,17 +8,21 @@ import {
 import DefaultLayout from "./views/layout/DefaultLayout";
 import Login from "./views/components/pages/Login";
 import PrivateRoute from './views/rounters/PrivateRoute'
+import { Carousel } from "antd";
+import Carousels from "./views/components/carousel/Carousels";
 
 function App() {
     return (
         <Router>
             <Switch>
-                <Route path="/login">
+                <Carousels/>
+            {/* <DefaultLayout/> */}
+                {/* <Route path="/login">
                     <Login />
                 </Route>
                 <PrivateRoute path="/">
                     <DefaultLayout/>
-                </PrivateRoute>
+                </PrivateRoute> */}
             </Switch>
         </Router>
     );
