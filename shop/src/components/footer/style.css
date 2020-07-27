@@ -1,17 +1,20 @@
 .footer {
     width: 100%;
     height: 30vh;
-    border-top: 1px solid black;
+    border-top: 1px solid gray;
     text-align: center;
+    margin-top: 66px;
 }
 
 .footer1 {
-    width: 100%;
+    width: 16%;
     height: 5vh;
     font-size: 28px;
     letter-spacing: 3px;
+    background: #fff;
+    font-family: 'Nunito', sans-serif;
     font-weight: bold;
-    text-shadow: 2px 2px 5px red;
+    margin: -25px 42% 5vh 42%;
 }
 
 .footer2 {
@@ -32,8 +35,16 @@
     padding: 0 5px;
 }
 
-.contact-left {
+.list-icon li a {
+    color: rgb(51, 53, 54);
+}
+
+.contact {
     width: 40%;
+}
+
+.contact-left {
+    padding-left: 20%;
 }
 
 .list-icon {
@@ -51,15 +62,29 @@
     display: inline!important;
 }
 
-.footer2 ul li:hover {
+.contact-right {
+    padding-right: 20%;
+}
+
+.footer2 ul li a:hover {
     color: brown;
 }
 
 .footer3 {
     width: 100%;
-    height: 10vh;
+    height: 15vh;
 }
 
 .footer3 div {
     padding: 0 0 10px 0;
+}
+
+#email {
+    height: 5vh;
+    margin-right: 10px;
+}
+
+.sub-now {
+    height: 5vh !important;
+    background-color: rgba(40, 40, 40, 1) !important;
 }

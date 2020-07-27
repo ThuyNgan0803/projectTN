@@ -44,10 +44,10 @@ class Footer extends Component {
         return (
             <div className="footer">
             <div className="footer1">
-                Welcome
+                welcome
             </div>
             <div className="footer2">
-                <div className="contact-left">
+                <div className="contact contact-left">
                     <ul>
                         <li>Home</li>
                         <li>Shop Collection</li>
@@ -55,15 +55,15 @@ class Footer extends Component {
                         <li>Contact</li>
                     </ul>
                 </div>
-                <div className="contact-left list-icon">
+                <div className="contact list-icon">
                     <ul >
-                        <li><GithubOutlined /></li>
-                        <li><IconFont type="icon-facebook" /></li>
-                        <li><SkypeOutlined /></li>
+                        <li><a target="_blank" href="https://github.com/ThuyNgan0803"><GithubOutlined /></a></li>
+                        <li><a href="https://www.facebook.com/thuyngan.duong.33" target="_blank" rel="noopener noreferrer"><IconFont type="icon-facebook" /></a></li>
+                        <li><a target="_blank" href="https://join.skype.com/invite/VyhVRYTpd7dv"><SkypeOutlined /></a></li>
                     </ul>
                 </div>
-                <div className="contact-left">
-                    <ul>
+                <div className="contact contact-right">
+                    <ul> 
                         <li>Shipping & Returns</li>
                         <li>Store Policy</li>
                         <li>Payment Methods</li>
@@ -78,6 +78,7 @@ class Footer extends Component {
                 <div className="subcribe">
                 <input type="email" id="email" name="email" placeholder = "Enter your mail..."></input>
                 <Button
+                className="sub-now"
                     type="primary"
                     loading={loadings[1]}
                     onClick={() => this.enterLoading(1)}

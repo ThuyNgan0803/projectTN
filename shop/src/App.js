@@ -30,7 +30,7 @@ function App() {
         Sale 70%
       </div>
       <div className="logo">
-        DBN Shop
+        shop
       </div>
       <div className="header">
         <ul>
@@ -52,7 +52,7 @@ function App() {
           <li className= "cart">
             <Link to= "/Cart"><IconFont type="icon-shoppingcart" /></Link>
           </li>
-          <li className= "avt">
+          <li className= "avt ">
             <Link to= "/Login"><Avatar icon={<UserOutlined />} /></Link>
           </li>
         </ul>

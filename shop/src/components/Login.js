@@ -33,26 +33,30 @@ class Login extends Component {
         };
     }
 
+    login = () => {
+
+    }
+
     btnLogin = (event) => {
         this.setState({ loading: true, message: {} });
-        this.props.login(this.state.data)
-            .then((res) => {
-              console.log("ress",res)
-                if (res.data.token) {
-                    console.log("Login successful!");
-                    // redirect to homepage
-                    setTimeout(() => {
-                        window.location.href = "/";
-                    }, 1000);
-                    this.setState({ message: { success: "Successful!" } });
-                }
-                // this.setState({ loading: false });
-            })
-            .catch((err) => {
-                console.log(err.response);
-                this.setState({ loading: false });
-                this.setState({ message: { err: err.response.data.err } });
-            });
+        // this.state.login(this.state.data)
+        //     .then((res) => {
+        //       console.log("ress",res)
+        //         if (res.data.token) {
+        //             console.log("Login successful!");
+        //             // redirect to homepage
+        //             setTimeout(() => {
+        //                 window.location.href = "/";
+        //             }, 1000);
+        //             this.setState({ message: { success: "Successful!" } });
+        //         }
+        //         // this.setState({ loading: false });
+        //     })
+        //     .catch((err) => {
+        //         console.log(err.response);
+        //         this.setState({ loading: false });
+        //         this.setState({ message: { err: err.response.data.err } });
+        //     });
         event.preventDefault();
     };
 
@@ -73,12 +77,13 @@ class Login extends Component {
                     <Alert
                         message={message.err}
                         type="error"
-                        style={{ width: "300px", margin: "10px auto" }}
+                        style={{ width: "300px", margin: "10px auto"  }}
                     />
                 )}
                 <Form
                     {...layout}
                     name="basic"
+                    style={{ width: "60% ",margin: "10vh 20%" }}
                     initialValues={{
                         remember: true,
                         username: data.username,
