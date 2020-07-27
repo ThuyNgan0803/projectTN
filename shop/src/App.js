@@ -12,6 +12,7 @@ import {
   HomeOutlined,
   UserOutlined,
 } from '@ant-design/icons';
+import 'antd/dist/antd.css';
 import { Avatar } from 'antd';
 import "./App.css"
 
@@ -34,19 +35,19 @@ function App() {
       <div className="header">
         <ul>
           <li>
-            <Link to= "/"><HomeOutlined /></Link>
+            <Link className="header-item" to= "/"><HomeOutlined /></Link>
           </li>
           <li>
-            <Link to= "/Home">Home</Link>
+            <Link className="header-item"  to= "/Home">Home</Link>
           </li>
           <li>
-            <Link to= "/Shop">Shop</Link>
+            <Link className="header-item" to= "/Shop">Shop</Link>
           </li>
           <li>
-            <Link to= "/OurStory">Our Story</Link>
+            <Link className="header-item"  to= "/OurStory">Our Story</Link>
           </li>
           <li>
-            <Link to= "/Contact">Contact</Link>
+            <Link className="header-item"  to= "/Contact">Contact</Link>
           </li>
           <li className= "cart">
             <Link to= "/Cart"><IconFont type="icon-shoppingcart" /></Link>

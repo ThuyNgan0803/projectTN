@@ -1,0 +1,19 @@
+.slider {
+    padding: 20px;
+    width: 150px;
+    background: #f0f0f0;
+    padding-left: 5%;
+}
+
+.slider .list-slider {
+    list-style-type: none;
+    padding: 0
+}
+
+.slider-item {
+    text-decoration: none;
+}
+
+.slider-item:hover {
+    color: maroon;
+}

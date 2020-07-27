@@ -82,7 +82,7 @@ class Footer extends Component {
                     loading={loadings[1]}
                     onClick={() => this.enterLoading(1)}
                     >
-                    Click me!
+                    Subcribe Now
                 </Button>
                 </div>
             </div>

@@ -32,6 +32,38 @@ class Login extends Component {
             loading: false,
         };
     }
+
+    btnLogin = (event) => {
+        this.setState({ loading: true, message: {} });
+        this.props.login(this.state.data)
+            .then((res) => {
+              console.log("ress",res)
+                if (res.data.token) {
+                    console.log("Login successful!");
+                    // redirect to homepage
+                    setTimeout(() => {
+                        window.location.href = "/";
+                    }, 1000);
+                    this.setState({ message: { success: "Successful!" } });
+                }
+                // this.setState({ loading: false });
+            })
+            .catch((err) => {
+                console.log(err.response);
+                this.setState({ loading: false });
+                this.setState({ message: { err: err.response.data.err } });
+            });
+        event.preventDefault();
+    };
+
+    onDataChange = (event) => {
+        this.setState({
+            data: {
+                ...this.state.data,
+                [event.target.name]: event.target.value,
+            },
+        });
+    };
     render() {
         const { data, message, loading } = this.state;
         return (
@@ -66,6 +98,7 @@ class Login extends Component {
                         <Input
                             name="username"
                             value={data.username}
+                            onChange={this.onDataChange}
                         />
                     </Form.Item>
 
@@ -82,6 +115,7 @@ class Login extends Component {
                         <Input.Password
                             name="password"
                             value={data.password}
+                            onChange={this.onDataChange}
                         />
                     </Form.Item>
 
@@ -97,6 +131,7 @@ class Login extends Component {
                         <Button
                             type="primary"
                             htmlType="submit"
+                            onClick={this.btnLogin}
                             disabled={loading}
                         >
                             {loading ? <Spin /> : "Submit"}
@@ -108,4 +143,5 @@ class Login extends Component {
         );
     }
 }
+
 export default Login
