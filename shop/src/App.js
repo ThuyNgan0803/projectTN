@@ -1,19 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import Home from './components/Home'
+import Shop from './components/homepage/Shop'
 import Login from './components/Login'
-import Shop from './components/Shop'
 import OurStory from './components/OurStory'
 import Contact from './components/contact/Contact'
 import Carl from './components/carousel/Carl'
 import Footer from './components/footer/Footer'
+import Products from './components/products/Products'
 import {
   createFromIconfontCN,
   HomeOutlined,
   UserOutlined,
 } from '@ant-design/icons';
 import 'antd/dist/antd.css';
-import { Avatar } from 'antd';
+import { Avatar, Divider } from 'antd';
 import "./App.css"
 
 const IconFont = createFromIconfontCN({
@@ -37,18 +37,17 @@ function App() {
           <li>
             <Link className="header-item" to= "/"><HomeOutlined /></Link>
           </li>
-          <li>
-            <Link className="header-item"  to= "/Home">Home</Link>
-          </li>
-          <li>
-            <Link className="header-item" to= "/Shop">Shop</Link>
-          </li>
-          <li>
-            <Link className="header-item"  to= "/OurStory">Our Story</Link>
-          </li>
-          <li>
-            <Link className="header-item"  to= "/Contact">Contact</Link>
-          </li>
+          <div className="header-center">
+            <li>
+              <Link className="header-item"  to= "/Shop">Shop</Link>
+            </li>
+            <li>
+              <Link className="header-item"  to= "/OurStory">Our Story</Link>
+            </li>
+            <li>
+              <Link className="header-item"  to= "/Contact">Contact</Link>
+            </li>
+          </div>
           <li className= "cart">
             <Link to= "/Cart"><IconFont type="icon-shoppingcart" /></Link>
           </li>
@@ -57,13 +56,16 @@ function App() {
           </li>
         </ul>
       </div>
+      <Divider orientation="center" style={{ color: '#333', fontWeight: 'normal' }}/>
       <div className="content">
         <Switch>
           <Route exact path="/">
-            <Carl/>
-          </Route>
-          <Route path="/Home">
-            <Home />
+            <div className="carl-page">
+              <Carl/>
+            </div>
+            <div className="products">
+              <Products/>
+            </div>
           </Route>
           <Route path="/Shop">
             <Shop/>

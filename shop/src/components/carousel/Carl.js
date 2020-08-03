@@ -5,6 +5,7 @@ import "./style.css"
 class Carl extends Component {
     render() {
         return (
+            <>
             <Carousel autoplay className = "ant-carousel">
                 <div className = "slick-slide">
                     <img src="https://hinhnenpowerpointdep.com/uploads/images/25-bieu-tuong-adidas-day-mau-sac-day-an-tuong-1487830736-14.jpg" 
@@ -30,13 +31,14 @@ class Carl extends Component {
                     style={{width:"100%",height:"50vh", objectFit:"cover"}}
                     />
                 </div>
-                <div className = "slick-slide slide5">
+                <div className = "slick-slide">
                     <img src="https://images.solecollector.com/complex/image/upload/c_fill,f_auto,fl_lossy,q_auto,w_1100/brand-vans_ncetfc.jpg" 
                     alt="Vans"
                     style={{width:"100%",height:"50vh", objectFit:"cover"}}
                     />
                 </div>
             </Carousel>
+            </>
         );
     }
 }

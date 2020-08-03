@@ -57,9 +57,9 @@ class Footer extends Component {
                 </div>
                 <div className="contact list-icon">
                     <ul >
-                        <li><a target="_blank" href="https://github.com/ThuyNgan0803"><GithubOutlined /></a></li>
+                        <li><a target="_blank" href="https://github.com/ThuyNgan0803"  rel="noopener noreferrer"><GithubOutlined /></a></li>
                         <li><a href="https://www.facebook.com/thuyngan.duong.33" target="_blank" rel="noopener noreferrer"><IconFont type="icon-facebook" /></a></li>
-                        <li><a target="_blank" href="https://join.skype.com/invite/VyhVRYTpd7dv"><SkypeOutlined /></a></li>
+                        <li><a target="_blank" href="https://join.skype.com/invite/VyhVRYTpd7dv"  rel="noopener noreferrer"><SkypeOutlined /></a></li>
                     </ul>
                 </div>
                 <div className="contact contact-right">
